@@ -1,0 +1,79 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/transfer.css">
+	<script type="text/javascript" src="js/transfer_data.js"></script>
+	<script>
+		var used_rows=parent.excel_sheet.UsedRange.rows.Count;
+		var currentTime=new Date();
+		var month = currentTime.getMonth() + 1;
+		var day = currentTime.getDate();
+		var year = currentTime.getFullYear();
+		var i,date=day+"/"+month+"/"+year;;
+		var time=currentTime.getHours()+":"+currentTime.getMinutes();
+		var accno,name,trans_no_sender=parent.user_trans_sheet.UsedRange.rows.Count;
+		var flag=1;
+	</script>
+</head>
+<body onload="getbal();">
+	<div id="container">
+		<table id="outer_main" width=100%>
+			<tr>
+				<td>
+					<div id="top" style="margin-bottom:10px;">
+						<div id="page_name" style="float:left;border-bottom:1px dotted black;">
+							<font color="#3399ff">Transfer Page</font>
+						</div>
+						<div id="show_bal">
+							Current Account Balance = <span id="my_bal"></span>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div style="margin-top:15px;float:left;">
+					Please enter the details below to transfer money :<br>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div id="transfer_form">
+			<form name="transfer" onSubmit="return submit_form();" method="post">
+				<table width=55% cellpadding=8px>
+					<tr>
+						<td colspan=3>All <span class="imp">FIELDS </span>are Important.</td>
+					</tr>
+					<tr>
+						<td colspan=3 id="show_err"></td>
+					</tr>
+					<tr>
+						<td class="field_name">Receiver Account No. :</td>
+						<td>
+							<input type="field" onblur="get_sender();" name="reciever_accno" maxlength=10>
+						</td>
+					</tr>
+					<tr>
+						<td class="field_name">Receiver name :</td>
+						<td id="receiver_name"></td>
+						<td>
+						<table class="imp">
+							<tr>
+								<td style="vertical-align:top;">*</td>
+								<td>Receiver's name will automatically displayed.If not the account number must be wrong.</td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="field_name">Amount :</td>
+						<td><input type="text" name="transfer_amount"></td>
+					</tr>
+					<tr>
+						<td align="center" colspan=2><input type="submit" value="Submit"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

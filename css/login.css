@@ -1,0 +1,41 @@
+#login
+	{
+		position:relative;
+		margin-top:50px;
+		margin-bottom:20%;
+	}
+#wel_head
+	{
+		margin-top:8%;
+		border:1px solid black;
+		font-size:25px;
+	}
+#wel_head font
+	{
+		font-size:35px;
+	}
+#login_form
+	{
+		min-width:250px;
+		position:relative;
+		border:1.5px solid #ADADAD;
+		border-radius:5px;
+		margin-top:100px;
+		margin-right:42%;
+		margin-left:40%;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+#login_table
+	{
+		border-spacing:5px;
+	}
+#note_secure
+	{
+		margin-top:30px;
+		margin-left:20%;
+		margin-right:20%;
+		background-color:#cccccc;
+		border:2px solid #ADADAD;
+		border-radius:5px;
+	}

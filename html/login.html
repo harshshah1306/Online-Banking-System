@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>Welcome To SBM</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_logo.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/excel_login.js"></script>
+</head>
+<body onload="checkCookie_login();" onunload="sheet_quit();">
+	<div id="wrap">
+		<div id="top">
+			<a href="main.html" target"_top"><img src="src/logo.jpg" height="100px" width="500px" style="border:0;"></a>
+			<div id="display_user" style="float:right;">
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+		</div>
+		<div id="nav">
+			<div id="nav_bar">
+				<ul>
+					<li><a href="main.html">&nbsp;Home&nbsp;</a></li>
+					<li><a href="#">&nbsp;Service&nbsp;</a>
+						<ul id="sub_menu_services">
+							<li><a href="personal_banking.html">&nbsp;Personal Banking&nbsp;</a></li>
+							<li><a href="corporate_banking.html">&nbsp;Corporate Banking&nbsp;</a></li>
+						</ul>
+					</li>
+					<li><a href="registration.html">&nbsp;Online Account Application&nbsp;</a></li>
+				</ul>
+			</div>
+			<div id="general_info">
+				<ul>
+					<li><a href="faq.html">&nbsp;FAQ&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="customer_care.html">&nbsp;Customer Care&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="about.html">&nbsp;About&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="login">
+			<div id="wel_head">
+				<center>Welcome To <font color="#3399ff">Online Banking</font></center>
+			</div>
+			<div id="login_form">
+				<form name="login_info" onsubmit="return validate();" method="post">
+					<table id="login_table" border="0">
+						<tr>
+							<td colspan="2"><font id="show_err" color="red"></font></td>
+						</tr>
+						<tr>
+							<td>Username : </td>
+							<td><input type="text" name="usrname" placeholder="Enter your name"></td>
+						</tr>
+						<tr>
+							<td>Password : </td>
+							<td><input type="password" name="pswd" placeholder="Enter your Password"></td>
+						</tr>
+					</table>
+					<center><input type="submit" value="Login"></center>
+				</form>
+			</div>
+			<div id="note_secure">
+				<table>
+					<tr>
+						<td><image src="src/warning_sign.jpg" alt="Security Tip" width="50" height="50"></td>
+						<td>
+							<b>
+								NEVER respond to any popup,email, SMS or phone call, no matter how appealing or official  looking,  seeking your personal information  such as username, password(s), mobile number, ATM Card details, etc. Such communications are sent or created by fraudsters to trick you into parting with your credentials.
+							</b>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="footer">
+			<hr>
+			CopyRight &copy; 2014 USBM.
+		</div>
+	</div>
+</body>
+</html>

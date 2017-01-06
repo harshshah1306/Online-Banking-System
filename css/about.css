@@ -1,0 +1,21 @@
+#container
+	{
+		margin:60px 40px 20px 40px;
+		position:relative;
+		overflow:visible;
+		width:95%;
+		min-width:95%;
+	}
+#about_us
+	{
+		margin:10px;
+		overflow:hidden;
+	}
+#our_moto
+	{
+		color:#9B9C98;
+	}
+b
+	{
+		color:#3399ff;
+	}

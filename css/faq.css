@@ -1,0 +1,52 @@
+#container
+	{
+		margin-top:60px;
+	}
+#login_opt
+	{
+		float:right;
+		margin-right:50px;
+		background-color:#0099cc;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:8px;
+		padding-right:8px;
+		border-radius:6px;
+		visibility:visible;
+		display:block;
+	}
+#login_opt a
+	{
+		text-decoration:none;
+		background-color:#0099cc;
+		font-size:23px;
+	}
+#page_heading
+	{
+		margin-left:75px;
+		font-size:35px;
+		color:#0099cc;
+		margin-bottom:8px;
+	}
+#faq_table
+	{
+		margin-left:35px;
+		margin-right:15px;
+	}
+#faq_table td
+	{
+		padding-left:10px;
+		padding-bottom:10px;
+	}
+.question
+	{
+		border-top:1px dashed #ADADAD;
+		font-weight:bold;
+		font-size:20px;
+		color:#33ccff;
+	}
+.question td
+	{
+		padding-top:10px;
+		padding-bottom:0;
+	}

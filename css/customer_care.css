@@ -1,0 +1,38 @@
+#container
+	{
+		border:1.5px solid #ADADAD;
+		position:relative;
+		border-radius:3.5px;
+		width:800px;
+		overflow:hidden;
+		min-width:650px;
+		margin:50px;
+		margin-left:250px;
+		margin-bottom:0px;
+		padding-top:15px;
+	}
+.heading
+	{
+		color:#3399ff;
+	}
+table
+	{
+		border-collapse: separate;
+        border-spacing: 20px 20px;
+	}
+td
+	{
+		vertical-align:top;
+	}
+#phone_no
+	{
+		width:500px;
+		position:relative;
+		margin-left:100px;
+		padding:0px;
+	}
+#phone_no table
+	{
+		margin:0px;
+		vertical-align:top;
+	}

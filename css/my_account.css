@@ -1,0 +1,19 @@
+#details_table,#pwd_table
+	{
+		font-size:25;
+		border:1px solid black;
+		border-radius:10px;
+	}
+#pwd_box
+	{
+		visibility:hidden;
+		margin-left:0;
+		padding-left:20%;
+		padding-top:10%;
+		padding-bottom:10%;
+	}
+#show_err
+	{
+		color:red;
+		font-size:15px;
+	}

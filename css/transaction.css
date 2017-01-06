@@ -1,0 +1,15 @@
+#page_heading
+	{
+		float:left;
+		border-bottom:1px dotted #ADADAD;
+		margin-bottom:15px;
+	}
+td
+	{
+		text-align:center;
+	}
+th
+	{
+		color:white;
+		border-color:black;
+	}

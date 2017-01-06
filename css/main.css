@@ -1,0 +1,85 @@
+#container
+	{
+		width:98%;
+		min-width:1100px;
+		margin-top:5%;
+		margin-left:14px;
+		overflow:hidden;
+	}
+#container_table
+	{
+		width:100%;
+		padding-left:50px;
+		padding-right:0px;
+		padding-bottom:50px;
+	}
+#container_table td
+	{
+		padding-right:20px;
+		overflow:hidden;
+		width:25%;
+	}
+#personal_banking
+	{
+		margin-left:5%;
+		margin-top:3%;
+		margin-bottom:2%;
+		width:95%;
+		overflow:hidden;
+		height:100%;
+		border-right:2px solid #ADADAD;
+		padding-top:100px;
+		padding-bottom:10%;
+	}
+#personal_banking td
+	{
+		color:#3399ff;
+		font-size:30px;
+	}
+#personal_banking a:link,a:visited
+	{
+		padding:2px 5px 2px 5px;
+		background-color:#0066cc;
+		text-decoration:none;
+		color:WHITE;
+		margin-left:14%;
+		padding:2px 5px 2px 5px;
+	}
+#corporate_banking
+	{
+		margin-left:8%;
+		margin-top:3%;
+		margin-bottom:2%;
+		width:95%;
+		height:100%;
+		border-right:2px solid #ADADAD;
+		overflow:hidden;
+		padding-top:100px;
+		padding-bottom:10%;
+	}
+#corporate_banking td
+	{
+		color:#3399ff;
+		font-size:30px;
+	}
+#corporate_banking a:link,a:visited
+	{
+		padding:2px 5px 2px 5px;
+		background-color:#0066cc;
+		text-decoration:none;
+		color:WHITE;
+		margin-left:14%;
+		padding:2px 5px 2px 5px;
+	}
+#usefull_link span
+	{
+		margin-left:8%;
+		font-size:32px;
+		color:#3399ff;
+	}
+#usefull_link ul
+	{
+		list-style:none;
+		font-size:20px;
+		color:#3399ff;
+	}

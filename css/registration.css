@@ -1,0 +1,62 @@
+#container
+	{
+		margin-top:50px;
+		margin-bottom:50px;
+		width:98%;
+		margin-left:14px;
+		padding-top:15px;
+		position:relative;
+	}
+#wel_head
+	{
+		margin-top:2%;
+		border-bottom:2px solid #ADADAD;
+		font-size:25px;
+	}
+#wel_head font
+	{
+		font-size:35px;
+	}
+#personal_info
+	{
+		position:relative;
+		margin-left:14px;
+		margin-right:14px;
+		margin-top:15px;
+	}
+#note
+	{
+		float:right;
+		width:150px;
+		min-width:150px;
+		padding-left:5px;
+		border:2px solid #ADADAD;
+		border-radius:3px;
+		margin-top:0px;
+		background-color:#ADADAD;
+	}
+.mark
+	{
+		color:red;
+	}
+#form_table
+	{
+		border-collapse:collapse;
+		border:1px solid black;
+		border-radius:2px;
+	}
+th,td
+	{
+		text-align:left;
+		border-bottom:1px solid black;
+	}
+#div_table td
+	{
+		border:0;
+	}
+.heading
+	{
+		background-color:#99ffff;
+		text-align:center;
+		border-bottom:2px solid #ADADAD;
+	}

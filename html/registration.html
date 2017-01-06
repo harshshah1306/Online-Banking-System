@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Welcome To USBM</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/registration.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_logo.css">
+	<script type="text/javascript" src="js/reg_check.js"></script>
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/excel_login.js"></script>
+	<script type="text/javascript" src="js/screen.js"></script>
+	<script>
+		if(getCookie("username")!="")
+		{
+			alert("Please Logout First!!");
+			window.location.assign(getCookie("prev_page"));
+		}
+		else
+		{
+			get_excelsheet();
+		}
+		var value_cor;
+		window.onload=function(){
+			display_cor();
+		}
+		
+		function display_cor()
+		{
+			if(document.getElementById("corporate").checked==true)
+			{
+				document.getElementById("corporate_field").style.visibility="visible";
+				document.getElementById("corporate_field").style.display="block";
+				value_cor=1;
+			}
+			else
+			{
+				document.getElementById("corporate_field").style.visibility="hidden";
+				document.getElementById("corporate_field").style.display="none";
+				value_cor=0;
+			}
+		}
+	</script>
+</head>
+<body onunload="sheet_quit();">
+	<div id="wrap">
+		<div id="top">
+			<a href="main.html" target="_top"><img src="src/logo.jpg" height="100px" width="500px" style="border:0;"></a>
+		</div>
+		<div id="nav">
+			<div id="nav_bar">
+				<ul>
+					<li><a href="main.html">&nbsp;Home&nbsp;</a></li>
+					<li><a href="#">&nbsp;Service&nbsp;</a>
+						<ul id="sub_menu_services">
+							<li><a href="personal_banking.html">&nbsp;Personal Banking&nbsp;</a></li>
+							<li><a href="corporate_banking.html">&nbsp;Corporate Banking&nbsp;</a></li>
+						</ul>
+					</li>
+					<li><a href="registration.html">&nbsp;Online Account Application&nbsp;</a></li>
+				</ul>
+			</div>
+			<div id="general_info">
+				<ul>
+					<li><a href="faq.html">&nbsp;FAQ&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="customer_care.html">&nbsp;Customer Care&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="about.html">&nbsp;About&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="container">
+		<div id="wel_head">
+			<center>Welcome To <font color="#3399ff">Online Account Registration</font></center>
+		</div>
+		<table id="div_table">
+			<tr>
+				<td>
+					<div id="personal_info">
+						<form name="register" onsubmit="return check_form();" method="post">
+							<table id="form_table" cellpadding="10px">
+								<tr>
+									<th colspan="2" class="heading">Registration Form</th>
+								</tr>
+								<tr>
+									<th>Name<span class="mark">*</span> : </th>
+									<th>
+										<select name="title_name" width="15px">
+											<option selected value="Mr. ">Mr.</option>
+											<option value="Mrs. ">Mrs.</option>
+											<option value="Ms. ">Ms.</option>
+										</select>
+										<input type="text" onfocus="this.select();" value="First Name" name="fname" maxlength=20> <input type="text" onfocus="this.select();" value="Middle Name" name="mname" maxlength=20><input type="text" onfocus="this.select();" value="Last Name" name="lname" maxlength=20>
+									</th>
+								</tr>
+								<tr>
+									<th colspan="2">
+										<input type="checkbox" id="corporate" onChange="display_cor();"> For Corporate Account
+										<table id="corporate_field" style="visibility:hidden;display:none;margin-left:20px;margin-top:5px;">
+											<tr>
+												<td>Account Name<span class="mark">*</span> : </td>
+												<td><input type="text" name="corporate_name"></td>
+											</tr>
+										</table>
+									</th>
+								</tr>
+								<tr>
+									<th>Account No.<span class="mark">*</span>:</th>
+									<th><input type="text" maxlength=6 name="acc_no"></th>
+								</tr>
+								<tr>
+									<th>User-Id<span class="mark">*</span> : </th>
+									<th><input type="text" maxlength=15 name="user_id"></th>
+								</tr>
+								<tr>
+									<th>Password<span class="mark">*</span> : </th>
+									<th><input type="password" name="password" maxlength=15></th>
+								</tr>
+								<tr>
+									<th><input type="submit" value="Submit"></th>
+									<th><input type="reset" value="Reset"></th>
+								</tr>
+							</table>
+						</form>
+					</div>
+					</td>
+					<td>
+					<div id="note">
+						<b>Note :</b><br>
+						All <span class="mark">*</span> are compulsory Fields.Please make sure that each and every fields are fill-up.Any <span class="mark">FAKE </span>Id's would not been tolerated and <span class="mark">STRICT</span> actions would be
+					</div>
+					</td>
+			</tr>
+		</table>
+	</div>
+	<div id="footer">
+		<hr>
+		CopyRight &copy; 2014 USBM.
+	</div>
+</body>
+</html>

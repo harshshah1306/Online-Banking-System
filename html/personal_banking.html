@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Welcome To USBM</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/personal_banking.css">
+	<link rel="stylesheet" type="text/css" href="css/nav_logo.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/excel_login.js"></script>
+	<script>
+		var row_no=getCookie("used_rows");
+		var trans;
+		function show_notification()
+		{
+			var unread_trans=0;
+			trans=user_trans_sheet.UsedRange.rows.Count;
+			for(i=2;i<=trans;i++)
+			{
+				if(user_trans_sheet.Cells(i,5).value==1)
+				{
+					unread_trans++;
+				}
+			}
+			document.getElementById("notification").innerHTML=unread_trans;
+		}
+	</script>
+</head>
+<body onload="checkCookie();setPrev_page();get_usersheet();show_notification();window.page.location.reload();" onunload="sheet_quit();">
+	<div id="wrap">
+		<div id="top">
+			<a href="#"><img src="src/logo.jpg" height="100px" width="500px" style="border:0px; text-decoration:none;"></a>
+			<div id="display_user" style="float:right;">
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+		</div>
+		<div id="nav">
+			<div id="nav_bar">
+				<ul>
+					<li><a href="#">&nbsp;Home&nbsp;</a></li>
+					<li><a href="#">&nbsp;Service&nbsp;</a>
+						<ul id="sub_menu_services">
+							<li><a href="personal_banking.html">&nbsp;Personal Banking&nbsp;</a></li>
+							<li><a href="corporate_banking.html">&nbsp;Corporate Banking&nbsp;</a></li>
+						</ul>
+					</li>
+					<li><a href="registration.html">&nbsp;Online Account Application&nbsp;</a></li>
+				</ul>
+			</div>
+			<div id="general_info">
+				<ul>
+					<li><a href="faq.html">&nbsp;FAQ&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="customer_care.html">&nbsp;Customer Care&nbsp;</a></li>
+					<li style="color:black;">|</li>
+					<li><a href="about.html">&nbsp;About&nbsp;</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="container" border="2px">	
+		<div id="options" border="2px">
+			<div id="banking_options" style="float:left;">
+				<ul>
+					<li><a href="transaction.html" target="page">Transactions (<span id="notification" style="bgcolor:red;">0</span>)</a></li>
+					<li><a href="transfer.html" target="page">Transfer</a></li>
+					<li><a href="my_account.html" target="page">My Account</a></li>
+				</ul>
+			</div>
+			<div id="my_account" style="float:right;">
+				<ul>
+					<li><a href="#" onClick="deleteCookie();">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="show_pages">
+			<iframe src="" width=98.5% height=650px frameborder=1px name="page" style="scrolling='auto';padding:0px;"></iframe>
+		</div>
+	</div>
+	<div id="footer">
+		<hr>
+		CopyRight &copy; 2014 USBM.
+	</div>
+</body>
+</html>

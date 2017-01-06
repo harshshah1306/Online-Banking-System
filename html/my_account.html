@@ -1,0 +1,78 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/my_account.css">
+	<script type="text/javascript" src="js/my_account.js"></script>
+	<script>
+	</script>
+</head>
+
+<body onload="my_details();">
+		<table width=100% height=60% >
+			<tr>
+				<td colspan=2>
+					<div id="page_name" style="float:left;border-bottom:1px dotted black;">
+						<font color="#3399ff">My Account</font>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="details_box" align="center">
+						<table id="details_table" cellpadding=5px;>
+							<tr>
+								<td>Name :</td>
+								<td id="name"></td>
+							</tr>
+							<tr id="accname">
+								<td>Account Name : </td>
+								<td id="acc_name"></td>
+							</tr>
+							<tr>
+								<td>Account No. :</td>
+								<td id="accno"></td>
+							</tr>
+							<tr>
+								<td>User-ID :</td>
+								<td id="user_id"></td>
+							</tr>
+							<tr>
+								<td>Balance :</td>
+								<td id="bal"></td>
+							</tr>
+							<tr>
+								<td colspan=2 align="center"><button onClick="show_block(1);">Change Password</button></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+				<td>
+					<div id="pwd_box">
+						<form name="pwd_chnge" onSubmit="return change_pwd();" method="post">
+							<table id="pwd_table" cellpadding=5px;>
+								<tr>
+									<td colspan="2" id="show_err"></td>
+								</tr>
+								<tr>
+									<td>Old Password :</td>
+									<td><input type="password" name="old_pwd_form" placeholder="Old Password"></td>
+								</tr>
+								<tr>
+									<td>New Password :</td>
+									<td><input type="password" name="new_pwd" placeholder="New Password"></td>
+								</tr>
+								<tr>
+									<td>Confirm Password :</td>
+									<td><input type="password" name="confirm_pwd" placeholder="Confirm Password"></td>
+								</tr>
+								<tr>
+									<td><input type="submit" value="Submit">&nbsp;&nbsp;<input type="reset" value="Reset"></td>
+									<td><input type="button" value="Cancel" onClick="show_block();"></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+</body>
+</html>
